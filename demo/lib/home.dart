@@ -1,3 +1,4 @@
+import 'package:demo/register.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -45,7 +46,12 @@ class _HomeState extends State<Home> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Register()),
+                  );
+                },
                 child: Text("User"),
               ),
             ),
