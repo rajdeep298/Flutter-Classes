@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -26,8 +27,9 @@ class _RegisterState extends State<Register> {
                 Container(
                   child: SizedBox(
                     height: 150,
-                    //child: Lottie.network(
-                    //  'https://lottie.host/465251be-508f-4f50-ba72-03378ce68e35/iTUMJMGb8j.json'),
+                    child: Lottie.network(
+                      'https://lottie.host/465251be-508f-4f50-ba72-03378ce68e35/iTUMJMGb8j.json',
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -78,6 +80,22 @@ class _RegisterState extends State<Register> {
                         ),
                       ),
                     ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.yellow,
+                      fixedSize: Size(250, 60),
+                      textStyle: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text("Register"),
                   ),
                 ),
               ],
